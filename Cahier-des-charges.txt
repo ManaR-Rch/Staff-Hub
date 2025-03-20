@@ -1,0 +1,99 @@
+📘 Cahier des Charges – Application RH Laravel
+1. Présentation Générale
+🎯 Objectif du projet
+Développer une application de gestion des ressources humaines avec Laravel (Blade pour les vues), permettant une gestion fluide et centralisée des employés, congés, absences, documents, paie, temps de travail et communication interne.
+
+2. Périmètre fonctionnel – Version 1
+2.1. Gestion des employés
+CRUD complet (Créer, Lire, Modifier, Supprimer)
+
+Champs : nom, prénom, date de naissance, poste, département, date d’embauche, statut (actif/inactif), numéro employé auto-généré
+
+Vue Blade avec formulaire de gestion
+
+JS : consommation de l’API pour affichage dynamique (ex : liste des employés sans rechargement)
+
+🔁 Évolutions futures : Envoi automatique d’identifiants par mail
+
+2.2. Gestion des congés
+Employé :
+Demande via formulaire (dates, type de congé)
+
+Visualisation historique
+
+Manager :
+Acceptation/refus avec commentaire
+
+Mise à jour automatique du solde de congés
+
+Backend :
+Modèle Conge
+
+Attributs : dates, type, statut, solde, employé
+
+JS : mise à jour instantanée de l’historique, notifications après réponse
+
+2.3. Absences non planifiées
+Déclaration d’absence (maladie, accident, etc.)
+
+Upload de justificatif
+
+Historique personnel des absences
+
+🔁 Évolutions futures : statistiques et alertes
+
+2.4. Gestion documentaire
+Upload de fichiers liés à chaque employé
+
+Listing, visualisation, suppression
+
+JS : drag & drop, prévisualisation 🔁 Futures évolutions : versioning, alertes expiration
+
+2.5. Suivi du temps de travail
+Entrée manuelle ou automatique des heures de début et fin
+
+Calcul automatique des heures/jour
+
+Affichage tableau hebdomadaire
+
+JS : visualisation dynamique sous forme de tableau
+
+2.6. Système d’e-mails internes
+Envoi d’e-mails RH automatiques (congé accepté/refusé, nouveau document, paie dispo)
+
+Notifications internes (rôle-based)
+
+Stockage des messages
+
+🔁 Évolution : système de messagerie complet
+
+2.7. Gestion de la paie
+Création des fiches de paie : salaire base + primes - déductions
+
+Statut : brouillon / validé
+
+Export PDF et envoi par mail
+
+Employé :
+Consultation historique
+
+Téléchargement PDF
+
+JS : bouton de génération et export
+
+2.8. Tâches RH
+Création et assignation de tâches
+
+Suivi du statut (en cours / terminée)
+
+Échéances
+
+3. Architecture technique
+3.1. Stack
+Backend : Laravel 10+
+
+Frontend : Blade (templating), JavaScript (AJAX/Fetch API)
+
+Base de données : MySQL
+
+
