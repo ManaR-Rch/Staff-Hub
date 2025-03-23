@@ -1,4 +1,4 @@
-📘 Cahier des Charges – Application RH Laravel
+📘 Cahier des Charges – STAFF-HUB
 1. Présentation Générale
 🎯 Objectif du projet
 Développer une application de gestion des ressources humaines avec Laravel (Blade pour les vues), permettant une gestion fluide et centralisée des employés, congés, absences, documents, paie, temps de travail et communication interne.
